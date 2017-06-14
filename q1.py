@@ -36,3 +36,10 @@ print age * days_a_year
 
 # Define a variable, name, and assign to it a string that is your name.
 name = "john"
+
+# Write Python code that prints out Udacity (with a capital U), 
+# given the definition of s below.
+s = 'audacity'
+print 'U' + s[2:]
+
+
