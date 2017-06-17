@@ -112,3 +112,151 @@ test()
 
 
 
+#########################################################################
+#                 10-row School abacus
+#                         by
+#                      Michael H
+#########################################################################
+#       Description partially extracted from from wikipedia 
+#
+#  Around the world, abaci have been used in pre-schools and elementary
+#
+# In Western countries, a bead frame similar to the Russian abacus but
+# with straight wires and a vertical frame has been common (see image).
+# Helps schools as an aid in teaching the numeral system and arithmetic
+#
+#         |00000*****   |     row factor 1000000000
+#         |00000*****   |     row factor 100000000
+#         |00000*****   |     row factor 10000000 
+#         |00000*****   |     row factor 1000000
+#         |00000*****   |     row factor 100000
+#         |00000*****   |     row factor 10000
+#         |00000*****   |     row factor 1000
+#         |00000****   *|     row factor 100     * 1
+#         |00000***   **|     row factor 10      * 2
+#         |00000**   ***|     row factor 1       * 3
+#                                        -----------    
+#                             Sum                123 
+#
+# Each row represents a different row factor, starting with x1 at the
+# bottom, ascending up to x1000000000 at the top row.     
+######################################################################
+
+# TASK:
+# Define a procedure print_abacus(integer) that takes a positive integer
+# and prints a visual representation (image) of an abacus setup for a 
+# given positive integer value.
+# 
+# Ranking
+# 1 STAR: solved the problem!
+# 2 STARS: 6 < lines <= 9
+# 3 STARS: 3 < lines <= 6
+# 4 STARS: 0 < lines <= 3
+
+def print_abacus(value):
+    blank = '   '
+    abacus = '|00000*****|'
+    i = 1000000000
+    while i > 0:
+        index = value / i
+        print abacus[:-index-1] + blank + abacus[-index-1:]
+        value = value - index * i
+        i = i / 10
+
+###  TEST CASES
+print "Abacus showing 0:"
+print_abacus(0)
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+print "Abacus showing 12345678:"
+print_abacus(12345678)
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000****   *|
+#>>>|00000***   **|
+#>>>|00000**   ***|
+#>>>|00000*   ****|
+#>>>|00000   *****|
+#>>>|0000   0*****|
+#>>>|000   00*****|
+#>>>|00   000*****|
+print "Abacus showing 1337:"
+print_abacus(1337)
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000*****   |
+#>>>|00000****   *|
+#>>>|00000**   ***|
+#>>>|00000**   ***|
+#>>>|000   00*****|
+
+
+
+
+
+# By Ashwath from forums
+
+# A leap year baby is a baby born on Feb 29, which occurs only on a leap year.
+
+# Define a procedure is_leap_baby that takes 3 inputs: day, month and year
+# and returns True if the date is a leap day (Feb 29 in a valid leap year)
+# and False otherwise.
+
+# A year that is a multiple of 4 is a leap year unless the year is
+# divisible by 100 but not a multiple of 400 (so, 1900 is not a leap
+# year but 2000 and 2004 are).
+
+def isLeapYear(year):
+    if year % 4 != 0:
+        return False
+    if year % 100 != 0:
+        return True
+    if year % 400 != 0:
+        return False
+    else:
+        return True
+
+def is_leap_baby(day,month,year):
+    # Write your code after this line.
+    if day == 29:
+        if month == 2:
+            if isLeapYear(year):
+                return True
+    return False
+
+# The function 'output' prints one of two statements based on whether 
+# the is_leap_baby function returned True or False.
+
+def output(status,name):
+    if status:
+        print "%s is one of an extremely rare species. He is a leap year baby!" % name
+    else:
+        print "There's nothing special about %s's birthday. He is not a leap year baby!" % name
+
+# Test Cases
+
+output(is_leap_baby(29, 2, 1996), 'Calvin')
+#>>>Calvin is one of an extremely rare species. He is a leap year baby!
+
+output(is_leap_baby(19, 6, 1978), 'Garfield')
+#>>>There's nothing special about Garfield's birthday. He is not a leap year baby!
+
+output(is_leap_baby(29, 2, 2000), 'Hobbes')
+#>>>Hobbes is one of an extremely rare species. He is a leap year baby!
+
+output(is_leap_baby(29, 2, 1900), 'Charlie Brown')
+#>>>There's nothing special about Charlie Brown's birthday. He is not a leap year baby!
+
+output(is_leap_baby(28, 2, 1976), 'Odie')
+#>>>There's nothing special about Odie's birthday. He is not a leap year baby!
