@@ -11,6 +11,7 @@ A procedure may take in some inputs and provide corresponding outputs.
 With procedures there is a need for controls.
 
 General guide to solving problems:
+
 0. Understanding the problem
   Problems are defined by a set of possible inputs and the relationship between the inputs and outputs.
   Solutions to problems are the procedure that produces outputs from the set of inputs.
@@ -32,3 +33,5 @@ General guide to solving problems:
   Split the procedure up into sub procedures and implement them one at a time.
   This reduces error, keeps the problem simple, and makes each component easy to test and code.
   Incrementally create the procedure and test, until a full solution is produced.
+
+Aliasing are assignments refering to the same objects. Any mutation to the object from one assignment will be reflected when referenced from the other assignments.
