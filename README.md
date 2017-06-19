@@ -6,10 +6,6 @@ Python programs are interpreted by yet another program (the Python interpreter) 
 Programming languages eliminates ambiguity and verbosity (using more words than necessary) to get instructions across.
 Backus-Naur Form (BNF) is a formal notation to describe the syntax of a given language.
 
-Procedures package codes so that they can be repeatedly used.
-A procedure may take in some inputs and provide corresponding outputs.
-With procedures there is a need for controls.
-
 General guide to solving problems:
 
 0. Understanding the problem
@@ -35,3 +31,8 @@ General guide to solving problems:
   Incrementally create the procedure and test, until a full solution is produced.
 
 Aliasing are assignments refering to the same objects. Any mutation to the object from one assignment will be reflected when referenced from the other assignments.
+
+Procedures allow codes to be used repeatedly.
+Procedures can be defined as well-defined sequence of steps that can be exceuted mechanically. Procedures take in some inputs and produces results as outputs.
+Algorithms are Procedures that are guaranteed to always finish and produce the correct results.
+Algorithms are compared and measured based on the time and memory cost relative to size of input to the algorithm.
