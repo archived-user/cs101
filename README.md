@@ -36,3 +36,5 @@ Procedures allow codes to be used repeatedly.
 Procedures can be defined as well-defined sequence of steps that can be exceuted mechanically. Procedures take in some inputs and produces results as outputs.
 Algorithms are Procedures that are guaranteed to always finish and produce the correct results.
 Algorithms are compared and measured based on the time and memory cost relative to size of input to the algorithm.
+
+Recursive definition requires a base case that is defined by a basic input, and a recursive case that is defined in terms of itself.
