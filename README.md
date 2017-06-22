@@ -38,3 +38,4 @@ Algorithms are Procedures that are guaranteed to always finish and produce the c
 Algorithms are compared and measured based on the time and memory cost relative to size of input to the algorithm.
 
 Recursive definition requires a base case that is defined by a basic input, and a recursive case that is defined in terms of itself.
+A problem can be solved by recursion using relaxation. By limiting the number of recursion, from a starting point determined by guesswork, the procedure can be gradually adjusted to provide better solution.
