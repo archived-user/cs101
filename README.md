@@ -39,3 +39,9 @@ Algorithms are compared and measured based on the time and memory cost relative 
 
 Recursive definition requires a base case that is defined by a basic input, and a recursive case that is defined in terms of itself.
 A problem can be solved by recursion using relaxation. By limiting the number of recursion, from a starting point determined by guesswork, the procedure can be gradually adjusted to provide better solution.
+
+There are 3 main themes to Computer Science:
+1. Abstraction - hiding details
+2. Universality - functionality can be used generally in all cases
+3. Recursive Definition - to build complex systems from smaller components
+
